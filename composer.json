@@ -24,7 +24,6 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "tedivm/stash-bundle": "0.4.*",
         "ezsystems/ezpublish-kernel": "dev-master",
-        "ezsystems/legacy-bridge": "dev-master",
         "ezsystems/platform-ui-bundle": "dev-master",
         "ezsystems/platform-ui-assets-bundle": "~0.1",
         "ezsystems/demobundle": "dev-master",
@@ -47,6 +46,9 @@
         "behat/mink-sahi-driver": "*",
         "behat/mink-selenium2-driver": "*",
         "ezsystems/behatbundle": "@dev"
+    },
+    "suggest": {
+        "ezsystems/legacy-bridge": "Provides the full legacy backoffice and legacy features"
     },
     "scripts": {
         "post-install-cmd": [
