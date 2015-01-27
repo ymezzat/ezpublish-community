@@ -8,8 +8,12 @@ echo "> Setup github auth key to not reach api limit"
 echo "> Add legacy-bridge to requirements"
 composer require --no-update "ezsystems/legacy-bridge:dev-master"
 
-echo "> Add LegacyBundle to Kernel"
+echo "> Add LegacyBundle to Kernel and routing.yml"
 php ./bin/.travis/enablelegacybundle.php
+echo "" >> ezpublish/config/routing.yml
+echo "_ezpublishLegacyRoutes:" >> ezpublish/config/routing.yml
+echo "    resource: '@EzPublishLegacyBundle/Resources/config/routing.yml'" >> ezpublish/config/routing.yml
+
 
 echo "> Install dependencies through composer"
 composer install --dev --prefer-dist
